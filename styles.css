@@ -1,29 +1,36 @@
 button {
   background-color: white;
-  border: none;
+  font-family: 'Marvel', sans-serif;
+font-size: 20px;
+  border-width: 0.8px;
   color: black;
-  padding: 15px 52px;;
+  padding: 10px 70px;;
   text-align: center;
-  text-decoration: none;
+  text-decoration-color: gray;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-	border-radius:30px;
+	border-radius:6px;
+	border-color: #F4F5F5;
+	align-content: center;
 }
 
 input {
 background-color: white;
 text-align: center;
-border-width: 0.8px;
-size: 50;
-border-radius: 30px;
-padding: 15px 19px;
+border-width: 0.6;
+border-radius: 15;
+padding: 10px 29px;
+border-color: #F4F5F5;
+font-size: 20px;
+align-content: center;
+font-family: 'Marvel', sans-serif;
 }
 
 h1 {
 font-family: Georgia, serif;
-font-size: 50px;
+font-size: 30px;
 }
 
 h2 {
@@ -31,19 +38,25 @@ font-family: copperplate, fantasy;
 font-size: 30px;
 }
 form{
-  box-sizing: center;
-width:400px;
-height: 550px;
-background: lightblue;
+background-color: #E8E8E8;
+box-sizing: center;
+width:350px;
+height: 580px;
+background-size: 350px 580px;
 border: 0.8px solid;
 border-radius: 3px;
-align-content: center;
+border-color: #F4F5F5;
 }
 div {
-  font-family: copperplate, fantasy;
+  font-family: 'Marvel', sans-serif;
 font-size: 25px;
 }
 h3{
-  font-size: 12px;
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 17px;
+color: gray;
+  font-family: 'Open Sans Condensed', sans-serif
+}
+p {
+font-family: 'Montserrat', sans-serif;
+color: #3B3B3B;
 }
