@@ -8,34 +8,51 @@
 
 <link rel="stylesheet" type="text/css" href="styles.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Marvel:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div align="center">
-        <form>
-    <h1>DILATAÇÃO</h1>
-    <div>Diâmetro</div>
-    <h3>Medida encontrada no furo da <br>peça a ser aquecida.</h3>
-    <input id= "input" type= "number" placeholder="0" step="0.01" oninput="myFunction()"><br><br>
-    <div>Interferência</div>
-    <h3>Diferença entre os diâmetros da <br>peça e do local de montagem.</h3>
-    <input id= "outroInput" type= "number" placeholder="0" step="0.01" oninput="myScript()">
+<form>
+
+    <p>CÁLCULO <br>DE DILATACÃO</p>
+<br>
+  
+    <h3>Medida encontrada no diâmetro interno da <br>peça a ser aquecida em mm.</h3>
+
+    <input id= "input" type= "number" placeholder="Diâmetro 0.00mm" step="0.01" oninput="myFunction()"><br><br>
+   
+    <h3>Diferença entre os diâmetros da peça e do<br> local de montagem em mm.</h3>
+
+    <input id= "outroInput" type= "number" placeholder="Interferência 0.00mm" step="0.01" oninput="myScript()">
       <br><br>
-    <button id="butao" type= "button" onclick="essaFunction()">Calcular</button>
-    <div id="demo"></div>
+    <button id="butao" type= "button" onclick="essaFunction()">CALCULAR</button><br>
+    <span id="demo"></span>
     </form>
 </body>
 <script>
 function essaFunction() {
-        var aDilatar = document.getElementById("input").value*1;
-        var interferencia = document.getElementById("outroInput").value*1;
+        var aDilatar = Number (document.getElementById("input").value);
+        var interferencia = Number (document.getElementById("outroInput").value);
         const folgaMontagem = aDilatar /1000;
         const alfa = 0.000011454;
         const deltaT = ((interferencia + folgaMontagem) /aDilatar) / alfa;
         const ta = 20;
         const deltaP = 28;
         var temperatura = deltaT + deltaP + ta;
-    document.getElementById("demo").innerHTML = "Temperatura de aquecimento: " + Math.round(temperatura +1) +" ºC";
+        if (aDilatar == "" || interferencia == "") {
+            document.getElementById("demo").innerHTML = ""
+        } else {
+    document.getElementById("demo").innerHTML = "Aquecer a: " + Math.round(temperatura +1) +"ºC";
+}
 }
 </script>
 </html>
